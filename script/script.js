@@ -13,18 +13,12 @@ const loadLevelWord = (id) => {
 const displayLevelWord = (words) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
-// {
-// "id": 4,
-// "level": 5,
-// "word": "Diligent",
-// "meaning": "পরিশ্রমী",
-// "pronunciation": "ডিলিজেন্ট"
-// }
+
     words.forEach(word => {
         console.log(word);
         const card = document.createElement("div")
         card.innerHTML = `
-         <div class="bg-white text-center py-10 px-5 rounded-xl shadow-sm space-y-4">
+         <div class="bg-white text-center py-10 px-5 rounded-xl shadow-sm space-y-4 h-full">
             <h2 class="text-2xl font-bold">${word.word}</h2>
             <p class="font-semibold">Meaning /Pronunciation</p>
             <div class="text-2xl font-medium bangla-font">"${word.meaning} / ${word.pronunciation}"</div>
